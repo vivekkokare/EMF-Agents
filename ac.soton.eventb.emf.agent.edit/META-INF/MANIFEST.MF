@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: ac.soton.eventb.emf.agent.edit;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: .
+Bundle-Activator: ac.soton.eventb.emf.agent.provider.AgentEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: ac.soton.eventb.emf.agent.provider
+Require-Bundle: org.eclipse.core.runtime,
+ ac.soton.eventb.emf.agent;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport,
+ org.eventb.emf.core;visibility:=reexport,
+ org.eventb.emf.core.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy

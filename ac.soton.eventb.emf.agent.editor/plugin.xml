@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyright (c) 2026 University of Southampton.
+ 
+ This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License 2.0
+ which accompanies this distribution, and is available at
+ https://www.eclipse.org/legal/epl-2.0/
+ 
+ SPDX-License-Identifier: EPL-2.0
+ 
+ Contributors:
+     University of Southampton - initial API and implementation
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ac.soton.eventb.emf.agent.presentation.AgentModelWizardID"
+            name="%_UI_AgentModelWizard_label"
+            class="ac.soton.eventb.emf.agent.presentation.AgentModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/AgentModelFile.gif">
+         <description>%_UI_AgentModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="ac.soton.eventb.emf.agent.presentation.AgentEditorID"
+            name="%_UI_AgentEditor_label"
+            icon="icons/full/obj16/AgentModelFile.gif"
+            extensions="agent"
+            class="ac.soton.eventb.emf.agent.presentation.AgentEditor"
+            contributorClass="ac.soton.eventb.emf.agent.presentation.AgentActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

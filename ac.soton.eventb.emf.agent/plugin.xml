@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated agent -->
+      <package
+            uri="http://soton.ac.uk/models/eventb/agent/2026"
+            class="ac.soton.eventb.emf.agent.AgentPackage"
+            genModel="model/agent.genmodel"/>
+   </extension>
+
+</plugin>

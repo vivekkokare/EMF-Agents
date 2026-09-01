@@ -2,4 +2,8 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="agent" nsURI="http://soton.ac.uk/models/eventb/agent/2026" nsPrefix="agent">
   <eClassifiers xsi:type="ecore:EClass" name="Agent" eSuperTypes="../../org.eventb.emf.core/model/eventbcore.ecore#//EventBNamedCommentedElement ../../org.eventb.emf.core/model/eventbcore.ecore#//AbstractExtension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AgentTypedVariable" eSuperTypes="../../ac.soton.eventb.emf.core.extension/model/eventbcoreextension.ecore#//TypedVariable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="agents" upperBound="-1"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

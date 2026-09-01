@@ -15,6 +15,9 @@
  */
 package ac.soton.eventb.emf.agent;
 
+import ac.soton.eventb.emf.core.extension.coreextension.CoreextensionPackage;
+
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -186,6 +189,142 @@ public interface AgentPackage extends EPackage {
 	 */
 	int AGENT_FEATURE_COUNT = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 1;
 
+	/**
+	 * The meta object id for the '{@link ac.soton.eventb.emf.agent.impl.AgentTypedVariableImpl <em>Typed Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ac.soton.eventb.emf.agent.impl.AgentTypedVariableImpl
+	 * @see ac.soton.eventb.emf.agent.impl.AgentPackageImpl#getAgentTypedVariable()
+	 * @generated
+	 */
+	int AGENT_TYPED_VARIABLE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGENT_TYPED_VARIABLE__ANNOTATIONS = CoreextensionPackage.TYPED_VARIABLE__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGENT_TYPED_VARIABLE__EXTENSIONS = CoreextensionPackage.TYPED_VARIABLE__EXTENSIONS;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGENT_TYPED_VARIABLE__ATTRIBUTES = CoreextensionPackage.TYPED_VARIABLE__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Reference</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGENT_TYPED_VARIABLE__REFERENCE = CoreextensionPackage.TYPED_VARIABLE__REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGENT_TYPED_VARIABLE__GENERATED = CoreextensionPackage.TYPED_VARIABLE__GENERATED;
+
+	/**
+	 * The feature id for the '<em><b>Local Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGENT_TYPED_VARIABLE__LOCAL_GENERATED = CoreextensionPackage.TYPED_VARIABLE__LOCAL_GENERATED;
+
+	/**
+	 * The feature id for the '<em><b>Internal Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGENT_TYPED_VARIABLE__INTERNAL_ID = CoreextensionPackage.TYPED_VARIABLE__INTERNAL_ID;
+
+	/**
+	 * The feature id for the '<em><b>Ordered Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGENT_TYPED_VARIABLE__ORDERED_CHILDREN = CoreextensionPackage.TYPED_VARIABLE__ORDERED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Comment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGENT_TYPED_VARIABLE__COMMENT = CoreextensionPackage.TYPED_VARIABLE__COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGENT_TYPED_VARIABLE__NAME = CoreextensionPackage.TYPED_VARIABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGENT_TYPED_VARIABLE__TYPE = CoreextensionPackage.TYPED_VARIABLE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGENT_TYPED_VARIABLE__VALUE = CoreextensionPackage.TYPED_VARIABLE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Agents</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGENT_TYPED_VARIABLE__AGENTS = CoreextensionPackage.TYPED_VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Typed Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGENT_TYPED_VARIABLE_FEATURE_COUNT = CoreextensionPackage.TYPED_VARIABLE_FEATURE_COUNT + 1;
+
 
 	/**
 	 * Returns the meta object for class '{@link ac.soton.eventb.emf.agent.Agent <em>Agent</em>}'.
@@ -196,6 +335,27 @@ public interface AgentPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getAgent();
+
+	/**
+	 * Returns the meta object for class '{@link ac.soton.eventb.emf.agent.AgentTypedVariable <em>Typed Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Typed Variable</em>'.
+	 * @see ac.soton.eventb.emf.agent.AgentTypedVariable
+	 * @generated
+	 */
+	EClass getAgentTypedVariable();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link ac.soton.eventb.emf.agent.AgentTypedVariable#getAgents <em>Agents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Agents</em>'.
+	 * @see ac.soton.eventb.emf.agent.AgentTypedVariable#getAgents()
+	 * @see #getAgentTypedVariable()
+	 * @generated
+	 */
+	EAttribute getAgentTypedVariable_Agents();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -228,6 +388,24 @@ public interface AgentPackage extends EPackage {
 		 * @generated
 		 */
 		EClass AGENT = eINSTANCE.getAgent();
+
+		/**
+		 * The meta object literal for the '{@link ac.soton.eventb.emf.agent.impl.AgentTypedVariableImpl <em>Typed Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ac.soton.eventb.emf.agent.impl.AgentTypedVariableImpl
+		 * @see ac.soton.eventb.emf.agent.impl.AgentPackageImpl#getAgentTypedVariable()
+		 * @generated
+		 */
+		EClass AGENT_TYPED_VARIABLE = eINSTANCE.getAgentTypedVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Agents</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AGENT_TYPED_VARIABLE__AGENTS = eINSTANCE.getAgentTypedVariable_Agents();
 
 	}
 

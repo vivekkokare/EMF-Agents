@@ -167,7 +167,6 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import ac.soton.eventb.emf.agent.provider.AgentItemProviderAdapterFactory;
-
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 import org.eventb.emf.core.context.provider.ContextItemProviderAdapterFactory;

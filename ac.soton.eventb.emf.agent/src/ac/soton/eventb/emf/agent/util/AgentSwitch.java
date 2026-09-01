@@ -17,6 +17,10 @@ package ac.soton.eventb.emf.agent.util;
 
 import ac.soton.eventb.emf.agent.*;
 
+import ac.soton.eventb.emf.core.extension.coreextension.Type;
+import ac.soton.eventb.emf.core.extension.coreextension.TypedVariable;
+import ac.soton.eventb.emf.core.extension.coreextension.Value;
+
 import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
@@ -29,6 +33,8 @@ import org.eventb.emf.core.EventBElement;
 import org.eventb.emf.core.EventBNamed;
 import org.eventb.emf.core.EventBNamedCommentedElement;
 import org.eventb.emf.core.EventBObject;
+
+import org.eventb.emf.core.machine.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -117,6 +123,22 @@ public class AgentSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AgentPackage.AGENT_TYPED_VARIABLE: {
+				AgentTypedVariable agentTypedVariable = (AgentTypedVariable)theEObject;
+				T result = caseAgentTypedVariable(agentTypedVariable);
+				if (result == null) result = caseTypedVariable(agentTypedVariable);
+				if (result == null) result = caseVariable(agentTypedVariable);
+				if (result == null) result = caseType(agentTypedVariable);
+				if (result == null) result = caseValue(agentTypedVariable);
+				if (result == null) result = caseEventBNamedCommentedElement(agentTypedVariable);
+				if (result == null) result = caseEventBCommentedElement(agentTypedVariable);
+				if (result == null) result = caseEventBNamed(agentTypedVariable);
+				if (result == null) result = caseEventBElement(agentTypedVariable);
+				if (result == null) result = caseEventBCommented(agentTypedVariable);
+				if (result == null) result = caseEventBObject(agentTypedVariable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -133,6 +155,21 @@ public class AgentSwitch<T> {
 	 * @generated
 	 */
 	public T caseAgent(Agent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Typed Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Typed Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAgentTypedVariable(AgentTypedVariable object) {
 		return null;
 	}
 
@@ -238,6 +275,66 @@ public class AgentSwitch<T> {
 	 * @generated
 	 */
 	public T caseAbstractExtension(AbstractExtension object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVariable(Variable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseType(Type object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseValue(Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Typed Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Typed Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTypedVariable(TypedVariable object) {
 		return null;
 	}
 

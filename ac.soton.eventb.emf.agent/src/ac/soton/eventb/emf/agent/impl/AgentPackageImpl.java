@@ -18,9 +18,14 @@ package ac.soton.eventb.emf.agent.impl;
 import ac.soton.eventb.emf.agent.Agent;
 import ac.soton.eventb.emf.agent.AgentFactory;
 import ac.soton.eventb.emf.agent.AgentPackage;
+import ac.soton.eventb.emf.agent.AgentTypedVariable;
 
+import ac.soton.eventb.emf.core.extension.coreextension.CoreextensionPackage;
+
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
@@ -39,6 +44,13 @@ public class AgentPackageImpl extends EPackageImpl implements AgentPackage {
 	 * @generated
 	 */
 	private EClass agentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass agentTypedVariableEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -87,7 +99,9 @@ public class AgentPackageImpl extends EPackageImpl implements AgentPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
+		EcorePackage.eINSTANCE.eClass();
 		CorePackage.eINSTANCE.eClass();
+		CoreextensionPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theAgentPackage.createPackageContents();
@@ -111,6 +125,24 @@ public class AgentPackageImpl extends EPackageImpl implements AgentPackage {
 	 */
 	public EClass getAgent() {
 		return agentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAgentTypedVariable() {
+		return agentTypedVariableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAgentTypedVariable_Agents() {
+		return (EAttribute)agentTypedVariableEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -142,6 +174,9 @@ public class AgentPackageImpl extends EPackageImpl implements AgentPackage {
 
 		// Create classes and their features
 		agentEClass = createEClass(AGENT);
+
+		agentTypedVariableEClass = createEClass(AGENT_TYPED_VARIABLE);
+		createEAttribute(agentTypedVariableEClass, AGENT_TYPED_VARIABLE__AGENTS);
 	}
 
 	/**
@@ -169,6 +204,8 @@ public class AgentPackageImpl extends EPackageImpl implements AgentPackage {
 
 		// Obtain other dependent packages
 		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		CoreextensionPackage theCoreextensionPackage = (CoreextensionPackage)EPackage.Registry.INSTANCE.getEPackage(CoreextensionPackage.eNS_URI);
+		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -177,9 +214,13 @@ public class AgentPackageImpl extends EPackageImpl implements AgentPackage {
 		// Add supertypes to classes
 		agentEClass.getESuperTypes().add(theCorePackage.getEventBNamedCommentedElement());
 		agentEClass.getESuperTypes().add(theCorePackage.getAbstractExtension());
+		agentTypedVariableEClass.getESuperTypes().add(theCoreextensionPackage.getTypedVariable());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(agentEClass, Agent.class, "Agent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(agentTypedVariableEClass, AgentTypedVariable.class, "AgentTypedVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAgentTypedVariable_Agents(), theEcorePackage.getEString(), "agents", null, 0, -1, AgentTypedVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

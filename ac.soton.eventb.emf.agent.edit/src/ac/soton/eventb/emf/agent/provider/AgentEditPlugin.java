@@ -18,7 +18,6 @@ package ac.soton.eventb.emf.agent.provider;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eventb.emf.core.provider.EventbcoreEditPlugin;
 
 /**

@@ -9,7 +9,9 @@ Bundle-Localization: plugin
 Export-Package: ac.soton.eventb.emf.agent.tests
 Require-Bundle: org.eclipse.core.runtime,
  ac.soton.eventb.emf.agent;visibility:=reexport,
+ org.eclipse.emf.ecore;visibility:=reexport,
  org.eventb.emf.core;visibility:=reexport,
+ ac.soton.eventb.emf.core.extension;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.junit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

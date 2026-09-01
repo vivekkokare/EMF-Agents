@@ -44,6 +44,15 @@ public interface AgentFactory extends EFactory {
 	Agent createAgent();
 
 	/**
+	 * Returns a new object of class '<em>Typed Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Typed Variable</em>'.
+	 * @generated
+	 */
+	AgentTypedVariable createAgentTypedVariable();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

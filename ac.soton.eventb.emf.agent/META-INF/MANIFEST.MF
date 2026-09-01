@@ -13,5 +13,6 @@ Export-Package: ac.soton.eventb.emf.agent,
  ac.soton.eventb.emf.agent.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eventb.emf.core;visibility:=reexport
+ org.eventb.emf.core;visibility:=reexport,
+ ac.soton.eventb.emf.core.extension;visibility:=reexport
 Bundle-ActivationPolicy: lazy

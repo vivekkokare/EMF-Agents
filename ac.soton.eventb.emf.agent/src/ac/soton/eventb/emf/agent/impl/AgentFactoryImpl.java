@@ -71,6 +71,7 @@ public class AgentFactoryImpl extends EFactoryImpl implements AgentFactory {
 		switch (eClass.getClassifierID()) {
 			case AgentPackage.AGENT: return createAgent();
 			case AgentPackage.AGENT_TYPED_VARIABLE: return createAgentTypedVariable();
+			case AgentPackage.COMPLETE_IGNORANCE_INVARIANT: return createCompleteIgnoranceInvariant();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -94,6 +95,16 @@ public class AgentFactoryImpl extends EFactoryImpl implements AgentFactory {
 	public AgentTypedVariable createAgentTypedVariable() {
 		AgentTypedVariableImpl agentTypedVariable = new AgentTypedVariableImpl();
 		return agentTypedVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CompleteIgnoranceInvariant createCompleteIgnoranceInvariant() {
+		CompleteIgnoranceInvariantImpl completeIgnoranceInvariant = new CompleteIgnoranceInvariantImpl();
+		return completeIgnoranceInvariant;
 	}
 
 	/**

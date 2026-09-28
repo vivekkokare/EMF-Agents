@@ -139,6 +139,18 @@ public class AgentSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AgentPackage.COMPLETE_IGNORANCE_INVARIANT: {
+				CompleteIgnoranceInvariant completeIgnoranceInvariant = (CompleteIgnoranceInvariant)theEObject;
+				T result = caseCompleteIgnoranceInvariant(completeIgnoranceInvariant);
+				if (result == null) result = caseEventBNamedCommentedElement(completeIgnoranceInvariant);
+				if (result == null) result = caseEventBCommentedElement(completeIgnoranceInvariant);
+				if (result == null) result = caseEventBNamed(completeIgnoranceInvariant);
+				if (result == null) result = caseEventBElement(completeIgnoranceInvariant);
+				if (result == null) result = caseEventBCommented(completeIgnoranceInvariant);
+				if (result == null) result = caseEventBObject(completeIgnoranceInvariant);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -170,6 +182,21 @@ public class AgentSwitch<T> {
 	 * @generated
 	 */
 	public T caseAgentTypedVariable(AgentTypedVariable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Complete Ignorance Invariant</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Complete Ignorance Invariant</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCompleteIgnoranceInvariant(CompleteIgnoranceInvariant object) {
 		return null;
 	}
 

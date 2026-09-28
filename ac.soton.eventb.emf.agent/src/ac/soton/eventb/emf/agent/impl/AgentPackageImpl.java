@@ -19,6 +19,7 @@ import ac.soton.eventb.emf.agent.Agent;
 import ac.soton.eventb.emf.agent.AgentFactory;
 import ac.soton.eventb.emf.agent.AgentPackage;
 import ac.soton.eventb.emf.agent.AgentTypedVariable;
+import ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant;
 
 import ac.soton.eventb.emf.core.extension.coreextension.CoreextensionPackage;
 
@@ -51,6 +52,13 @@ public class AgentPackageImpl extends EPackageImpl implements AgentPackage {
 	 * @generated
 	 */
 	private EClass agentTypedVariableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass completeIgnoranceInvariantEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -150,6 +158,51 @@ public class AgentPackageImpl extends EPackageImpl implements AgentPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCompleteIgnoranceInvariant() {
+		return completeIgnoranceInvariantEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCompleteIgnoranceInvariant_Agents() {
+		return (EAttribute)completeIgnoranceInvariantEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCompleteIgnoranceInvariant_Condition() {
+		return (EAttribute)completeIgnoranceInvariantEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCompleteIgnoranceInvariant_Fact() {
+		return (EAttribute)completeIgnoranceInvariantEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCompleteIgnoranceInvariant_Variables() {
+		return (EAttribute)completeIgnoranceInvariantEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public AgentFactory getAgentFactory() {
 		return (AgentFactory)getEFactoryInstance();
 	}
@@ -177,6 +230,12 @@ public class AgentPackageImpl extends EPackageImpl implements AgentPackage {
 
 		agentTypedVariableEClass = createEClass(AGENT_TYPED_VARIABLE);
 		createEAttribute(agentTypedVariableEClass, AGENT_TYPED_VARIABLE__AGENTS);
+
+		completeIgnoranceInvariantEClass = createEClass(COMPLETE_IGNORANCE_INVARIANT);
+		createEAttribute(completeIgnoranceInvariantEClass, COMPLETE_IGNORANCE_INVARIANT__AGENTS);
+		createEAttribute(completeIgnoranceInvariantEClass, COMPLETE_IGNORANCE_INVARIANT__CONDITION);
+		createEAttribute(completeIgnoranceInvariantEClass, COMPLETE_IGNORANCE_INVARIANT__FACT);
+		createEAttribute(completeIgnoranceInvariantEClass, COMPLETE_IGNORANCE_INVARIANT__VARIABLES);
 	}
 
 	/**
@@ -215,12 +274,19 @@ public class AgentPackageImpl extends EPackageImpl implements AgentPackage {
 		agentEClass.getESuperTypes().add(theCorePackage.getEventBNamedCommentedElement());
 		agentEClass.getESuperTypes().add(theCorePackage.getAbstractExtension());
 		agentTypedVariableEClass.getESuperTypes().add(theCoreextensionPackage.getTypedVariable());
+		completeIgnoranceInvariantEClass.getESuperTypes().add(theCorePackage.getEventBNamedCommentedElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(agentEClass, Agent.class, "Agent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(agentTypedVariableEClass, AgentTypedVariable.class, "AgentTypedVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAgentTypedVariable_Agents(), theEcorePackage.getEString(), "agents", null, 0, -1, AgentTypedVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(completeIgnoranceInvariantEClass, CompleteIgnoranceInvariant.class, "CompleteIgnoranceInvariant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCompleteIgnoranceInvariant_Agents(), theEcorePackage.getEString(), "agents", null, 0, -1, CompleteIgnoranceInvariant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCompleteIgnoranceInvariant_Condition(), theEcorePackage.getEString(), "condition", null, 0, 1, CompleteIgnoranceInvariant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCompleteIgnoranceInvariant_Fact(), theEcorePackage.getEString(), "fact", null, 1, 1, CompleteIgnoranceInvariant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCompleteIgnoranceInvariant_Variables(), theEcorePackage.getEString(), "variables", null, 1, -1, CompleteIgnoranceInvariant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

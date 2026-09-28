@@ -13,5 +13,11 @@
     <genClasses ecoreClass="agent.ecore#//AgentTypedVariable">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EAttribute agent.ecore#//AgentTypedVariable/agents"/>
     </genClasses>
+    <genClasses ecoreClass="agent.ecore#//CompleteIgnoranceInvariant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute agent.ecore#//CompleteIgnoranceInvariant/agents"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute agent.ecore#//CompleteIgnoranceInvariant/condition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute agent.ecore#//CompleteIgnoranceInvariant/fact"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute agent.ecore#//CompleteIgnoranceInvariant/variables"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

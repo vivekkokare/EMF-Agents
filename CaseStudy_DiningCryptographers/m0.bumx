@@ -1,0 +1,64 @@
+machine m0
+sees c0
+
+variable
+    s1 visible C1 
+variable
+	s2 visible C2
+variable
+ 	s3 visible C3
+
+variables
+c
+f
+r
+t 
+
+invariants
+@s1-type: s1 ∈ {0, 1}
+@s2-type: s2 ∈ {0, 1} 
+@s3-type: s3 ∈ {0, 1}
+@c-type: c ∈ BOOL
+@f-type: f ∈ BOOL
+@inv0_1: s1+s2+s3 ≤ 1
+@inv0_2: c = FALSE ⇒ f = FALSE
+@inv0_3: f = TRUE ⇒ r = bool(1 ∈ {s1, s2, s3})
+@inv0_4: c = TRUE ⇒ t = bool(1 ∈ {s1, s2, s3})
+
+complete ignorance
+@comp_ign1: if f = TRUE ∧ c = TRUE then 
+            knows only s1 ∈ {0, 1} about s1 visible others
+
+complete ignorance
+@comp_ign2: if t = TRUE then 
+            knows only s1 ∈ {0, 1} about s1 visible others
+
+complete ignorance
+@comp_ign3: if c = FALSE then 
+            knows only  s1 ∈ {0, 1} ∧ s2 ∈ {0, 1} ∧ s3 ∈ {0, 1} ∧ s1+s2+s3 ≤ 1 about s1 s2 s3 visible others
+
+events
+event INITIALISATION
+begin
+@shadow_update: s1, s2, s3 :∣ s1' ∈ {0,1} ∧ s2' ∈ {0,1} ∧ s3' ∈ {0,1} ∧ s1' + s2' + s3' ≤ 1
+@act2: c,f ≔ FALSE,FALSE
+@act3: r,t ≔ FALSE,FALSE
+end
+
+event calc
+when
+ @grd1: c = FALSE
+then
+ @act1: c ≔ TRUE
+ @shadow_update: t, s1, s2, s3 :∣ t' = bool(1 ∈ {s1, s2, s3}) ∧ s1' = s1 ∧ s2' = s2 ∧ s3' = s3 
+end
+
+   event reveal
+    when 
+      @grd1: f = FALSE
+      @grd2: c = TRUE
+    then
+      @act1: f ≔ TRUE
+      @act2: r ≔ t
+    end
+end

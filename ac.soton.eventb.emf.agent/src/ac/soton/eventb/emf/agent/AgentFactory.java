@@ -53,6 +53,15 @@ public interface AgentFactory extends EFactory {
 	AgentTypedVariable createAgentTypedVariable();
 
 	/**
+	 * Returns a new object of class '<em>Complete Ignorance Invariant</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Complete Ignorance Invariant</em>'.
+	 * @generated
+	 */
+	CompleteIgnoranceInvariant createCompleteIgnoranceInvariant();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

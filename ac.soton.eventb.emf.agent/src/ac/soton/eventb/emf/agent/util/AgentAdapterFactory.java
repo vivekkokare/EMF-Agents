@@ -103,6 +103,10 @@ public class AgentAdapterFactory extends AdapterFactoryImpl {
 				return createAgentTypedVariableAdapter();
 			}
 			@Override
+			public Adapter caseCompleteIgnoranceInvariant(CompleteIgnoranceInvariant object) {
+				return createCompleteIgnoranceInvariantAdapter();
+			}
+			@Override
 			public Adapter caseEventBObject(EventBObject object) {
 				return createEventBObjectAdapter();
 			}
@@ -191,6 +195,20 @@ public class AgentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAgentTypedVariableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant <em>Complete Ignorance Invariant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant
+	 * @generated
+	 */
+	public Adapter createCompleteIgnoranceInvariantAdapter() {
 		return null;
 	}
 

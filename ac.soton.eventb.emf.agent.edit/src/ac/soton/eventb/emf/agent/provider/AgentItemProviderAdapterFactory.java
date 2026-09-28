@@ -163,6 +163,29 @@ public class AgentItemProviderAdapterFactory extends AgentAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CompleteIgnoranceInvariantItemProvider completeIgnoranceInvariantItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCompleteIgnoranceInvariantAdapter() {
+		if (completeIgnoranceInvariantItemProvider == null) {
+			completeIgnoranceInvariantItemProvider = new CompleteIgnoranceInvariantItemProvider(this);
+		}
+
+		return completeIgnoranceInvariantItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

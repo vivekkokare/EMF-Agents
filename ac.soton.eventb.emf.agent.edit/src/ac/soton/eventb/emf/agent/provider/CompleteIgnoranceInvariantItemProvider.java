@@ -18,9 +18,7 @@ package ac.soton.eventb.emf.agent.provider;
 
 import ac.soton.eventb.emf.agent.AgentFactory;
 import ac.soton.eventb.emf.agent.AgentPackage;
-import ac.soton.eventb.emf.agent.AgentTypedVariable;
-
-import ac.soton.eventb.emf.core.extension.coreextension.provider.TypedVariableItemProvider;
+import ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant;
 
 import java.util.Collection;
 import java.util.List;
@@ -37,16 +35,21 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import org.eventb.emf.core.CorePackage;
 
+import org.eventb.emf.core.provider.EventBCommentedElementItemProvider;
+
 /**
- * This is the item provider adapter for a {@link ac.soton.eventb.emf.agent.AgentTypedVariable} object.
+ * This is the item provider adapter for a {@link ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class AgentTypedVariableItemProvider
-	extends TypedVariableItemProvider
+public class CompleteIgnoranceInvariantItemProvider
+	extends EventBCommentedElementItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -59,7 +62,7 @@ public class AgentTypedVariableItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AgentTypedVariableItemProvider(AdapterFactory adapterFactory) {
+	public CompleteIgnoranceInvariantItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -75,6 +78,9 @@ public class AgentTypedVariableItemProvider
 			super.getPropertyDescriptors(object);
 
 			addAgentsPropertyDescriptor(object);
+			addConditionPropertyDescriptor(object);
+			addFactPropertyDescriptor(object);
+			addVariablesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -90,26 +96,92 @@ public class AgentTypedVariableItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_AgentTypedVariable_agents_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AgentTypedVariable_agents_feature", "_UI_AgentTypedVariable_type"),
-				 AgentPackage.Literals.AGENT_TYPED_VARIABLE__AGENTS,
+				 getString("_UI_CompleteIgnoranceInvariant_agents_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CompleteIgnoranceInvariant_agents_feature", "_UI_CompleteIgnoranceInvariant_type"),
+				 AgentPackage.Literals.COMPLETE_IGNORANCE_INVARIANT__AGENTS,
 				 true,
 				 false,
-				 true,
-				 null,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This returns AgentTypedVariable.gif.
+	 * This adds a property descriptor for the Condition feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConditionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CompleteIgnoranceInvariant_condition_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CompleteIgnoranceInvariant_condition_feature", "_UI_CompleteIgnoranceInvariant_type"),
+				 AgentPackage.Literals.COMPLETE_IGNORANCE_INVARIANT__CONDITION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Fact feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFactPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CompleteIgnoranceInvariant_fact_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CompleteIgnoranceInvariant_fact_feature", "_UI_CompleteIgnoranceInvariant_type"),
+				 AgentPackage.Literals.COMPLETE_IGNORANCE_INVARIANT__FACT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Variables feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVariablesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CompleteIgnoranceInvariant_variables_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CompleteIgnoranceInvariant_variables_feature", "_UI_CompleteIgnoranceInvariant_type"),
+				 AgentPackage.Literals.COMPLETE_IGNORANCE_INVARIANT__VARIABLES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns CompleteIgnoranceInvariant.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/AgentTypedVariable"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/CompleteIgnoranceInvariant"));
 	}
 
 	/**
@@ -120,10 +192,10 @@ public class AgentTypedVariableItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((AgentTypedVariable)object).getName();
+		String label = ((CompleteIgnoranceInvariant)object).getReference();
 		return label == null || label.length() == 0 ?
-			getString("_UI_AgentTypedVariable_type") :
-			getString("_UI_AgentTypedVariable_type") + " " + label;
+			getString("_UI_CompleteIgnoranceInvariant_type") :
+			getString("_UI_CompleteIgnoranceInvariant_type") + " " + label;
 	}
 
 	/**
@@ -136,6 +208,15 @@ public class AgentTypedVariableItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(CompleteIgnoranceInvariant.class)) {
+			case AgentPackage.COMPLETE_IGNORANCE_INVARIANT__AGENTS:
+			case AgentPackage.COMPLETE_IGNORANCE_INVARIANT__CONDITION:
+			case AgentPackage.COMPLETE_IGNORANCE_INVARIANT__FACT:
+			case AgentPackage.COMPLETE_IGNORANCE_INVARIANT__VARIABLES:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

@@ -325,6 +325,151 @@ public interface AgentPackage extends EPackage {
 	 */
 	int AGENT_TYPED_VARIABLE_FEATURE_COUNT = CoreextensionPackage.TYPED_VARIABLE_FEATURE_COUNT + 1;
 
+	/**
+	 * The meta object id for the '{@link ac.soton.eventb.emf.agent.impl.CompleteIgnoranceInvariantImpl <em>Complete Ignorance Invariant</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ac.soton.eventb.emf.agent.impl.CompleteIgnoranceInvariantImpl
+	 * @see ac.soton.eventb.emf.agent.impl.AgentPackageImpl#getCompleteIgnoranceInvariant()
+	 * @generated
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT__ANNOTATIONS = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT__EXTENSIONS = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__EXTENSIONS;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT__ATTRIBUTES = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Reference</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT__REFERENCE = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT__GENERATED = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__GENERATED;
+
+	/**
+	 * The feature id for the '<em><b>Local Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT__LOCAL_GENERATED = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__LOCAL_GENERATED;
+
+	/**
+	 * The feature id for the '<em><b>Internal Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT__INTERNAL_ID = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__INTERNAL_ID;
+
+	/**
+	 * The feature id for the '<em><b>Ordered Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT__ORDERED_CHILDREN = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__ORDERED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Comment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT__COMMENT = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT__NAME = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Agents</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT__AGENTS = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT__CONDITION = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Fact</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT__FACT = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Variables</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT__VARIABLES = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Complete Ignorance Invariant</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_IGNORANCE_INVARIANT_FEATURE_COUNT = CorePackage.EVENT_BNAMED_COMMENTED_ELEMENT_FEATURE_COUNT + 4;
+
 
 	/**
 	 * Returns the meta object for class '{@link ac.soton.eventb.emf.agent.Agent <em>Agent</em>}'.
@@ -356,6 +501,60 @@ public interface AgentPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAgentTypedVariable_Agents();
+
+	/**
+	 * Returns the meta object for class '{@link ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant <em>Complete Ignorance Invariant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Complete Ignorance Invariant</em>'.
+	 * @see ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant
+	 * @generated
+	 */
+	EClass getCompleteIgnoranceInvariant();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant#getAgents <em>Agents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Agents</em>'.
+	 * @see ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant#getAgents()
+	 * @see #getCompleteIgnoranceInvariant()
+	 * @generated
+	 */
+	EAttribute getCompleteIgnoranceInvariant_Agents();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant#getCondition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Condition</em>'.
+	 * @see ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant#getCondition()
+	 * @see #getCompleteIgnoranceInvariant()
+	 * @generated
+	 */
+	EAttribute getCompleteIgnoranceInvariant_Condition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant#getFact <em>Fact</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fact</em>'.
+	 * @see ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant#getFact()
+	 * @see #getCompleteIgnoranceInvariant()
+	 * @generated
+	 */
+	EAttribute getCompleteIgnoranceInvariant_Fact();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant#getVariables <em>Variables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Variables</em>'.
+	 * @see ac.soton.eventb.emf.agent.CompleteIgnoranceInvariant#getVariables()
+	 * @see #getCompleteIgnoranceInvariant()
+	 * @generated
+	 */
+	EAttribute getCompleteIgnoranceInvariant_Variables();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -406,6 +605,48 @@ public interface AgentPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute AGENT_TYPED_VARIABLE__AGENTS = eINSTANCE.getAgentTypedVariable_Agents();
+
+		/**
+		 * The meta object literal for the '{@link ac.soton.eventb.emf.agent.impl.CompleteIgnoranceInvariantImpl <em>Complete Ignorance Invariant</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ac.soton.eventb.emf.agent.impl.CompleteIgnoranceInvariantImpl
+		 * @see ac.soton.eventb.emf.agent.impl.AgentPackageImpl#getCompleteIgnoranceInvariant()
+		 * @generated
+		 */
+		EClass COMPLETE_IGNORANCE_INVARIANT = eINSTANCE.getCompleteIgnoranceInvariant();
+
+		/**
+		 * The meta object literal for the '<em><b>Agents</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPLETE_IGNORANCE_INVARIANT__AGENTS = eINSTANCE.getCompleteIgnoranceInvariant_Agents();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPLETE_IGNORANCE_INVARIANT__CONDITION = eINSTANCE.getCompleteIgnoranceInvariant_Condition();
+
+		/**
+		 * The meta object literal for the '<em><b>Fact</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPLETE_IGNORANCE_INVARIANT__FACT = eINSTANCE.getCompleteIgnoranceInvariant_Fact();
+
+		/**
+		 * The meta object literal for the '<em><b>Variables</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPLETE_IGNORANCE_INVARIANT__VARIABLES = eINSTANCE.getCompleteIgnoranceInvariant_Variables();
 
 	}
 
